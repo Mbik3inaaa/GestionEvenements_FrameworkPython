@@ -75,5 +75,5 @@ def register(request):
 
 @login_required
 def user_events(request):
-    events = request.user.events.all()  # Assumes the relationship is set up
+    events = request.user.events.all() 
     return render(request, 'user/user_events.html', {'events': events})
