@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - Gestion d'Événements</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+    <header>
+        <h1>Bienvenue sur notre plateforme de gestion d'événements</h1>
+        <p>Créez, gérez et participez aux événements facilement.</p>
+        <a href="{% url 'event_list' %}" class="btn">Voir les événements</a>
+    </header>
+
+    <section class="features">
+        <div class="feature">
+            <i class="fa fa-calendar-check"></i>
+            <h2>Organisez vos événements</h2>
+            <p>Créez et personnalisez vos événements en quelques clics.</p>
+        </div>
+        <div class="feature">
+            <i class="fa fa-users"></i>
+            <h2>Inscription facile</h2>
+            <p>Les participants peuvent s'inscrire rapidement et recevoir des notifications.</p>
+        </div>
+        <div class="feature">
+            <i class="fa fa-bell"></i>
+            <h2>Rappels automatiques</h2>
+            <p>Recevez des rappels et des mises à jour pour ne jamais manquer un événement.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Gestion d'Événements | Tous droits réservés.</p>
+    </footer>
+
+</body>
+</html>

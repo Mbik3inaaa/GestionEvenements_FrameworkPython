@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>{{ event.title }}</h1>
+<p>{{ event.description }}</p>
+<p>Lieu : {{ event.location }}</p>
+<p>Début : {{ event.start_time }}</p>
+<p>Fin : {{ event.end_time }}</p>
+<p>Créé par : {{ event.created_by.username }}</p>
+
+{% if user.is_authenticated %}
+    {% if is_participant %}
+        <form method="post" action="{% url 'leave_event' event.id %}">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-warning">Quitter l'événement</button>
+        </form>
+    {% else %}
+        <form method="post" action="{% url 'join_event' event.id %}">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-success">Rejoindre l'événement</button>
+        </form>
+    {% endif %}
+{% endif %}
+
+<a href="{% url 'event_list' %}" class="btn btn-secondary">Retour</a>
+{% endblock %}
