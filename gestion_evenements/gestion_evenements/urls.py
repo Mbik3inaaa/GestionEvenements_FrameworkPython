@@ -6,6 +6,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
     path('events/', include('events.urls')),
-    path('accounts/', include('django.contrib.auth.urls')),  # 🔥 Ajoute ceci pour gérer login/logout
+    path('accounts/', include('django.contrib.auth.urls')),t
     
 ]
