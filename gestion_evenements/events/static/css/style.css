@@ -1,5 +1,4 @@
-/* Importation de la police */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 body {
     font-family: 'Poppins', sans-serif;
@@ -8,8 +7,7 @@ body {
     background: #f5f7fa;
     text-align: center;
 }
-
-/* HEADER */
+
 header {
     background: linear-gradient(135deg, #6e8efb, #a777e3);
     color: white;
