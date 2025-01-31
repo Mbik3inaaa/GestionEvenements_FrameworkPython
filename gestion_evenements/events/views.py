@@ -67,14 +67,13 @@ def register(request):
         form = UserCreationForm(request.POST)
         if form.is_valid():
             user = form.save()
-            login(request, user)  # 🔥 Connexion automatique après inscription
+            login(request, user) 
             return redirect('home')
     else:
         form = UserCreationForm()
     return render(request, 'registration/register.html', {'form': form})
 
 @login_required
-def user_events(request):
-    # Récupère les événements auxquels l'utilisateur est inscrit
+def user_events(request):
     events = request.user.events.all()  # Assumes the relationship is set up
     return render(request, 'user/user_events.html', {'events': events})
